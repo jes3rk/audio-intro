@@ -6,31 +6,32 @@ $(document).ready(function() {
 // build the tutorial cards automatically with jQuery
 function tutorialCards() {
   var tutorials = [
+    // note that links should be referenced from where the html is
     {
       title: "Gain",
-      summary: "Gain Summary",
-      image: "#",
-      imageAlt: "alt",
+      summary: "Simply put, gain is aplification. However, how and when gain is used can have a considerable impact on the sound and gain staging is one of the most important parts of live and recorded sound.",
+      image: "./assets/images/knob.jpg",
+      imageAlt: "Knobs on an audio device",
       tutorialLink: "#"
     },
     {
       title: "Equlization",
       summary: "Equlization, or EQ, is one of the most commonly used audio processing tools. EQ units range from very simple high and low shelves to large 31 band graphic units. This tutorial slowly builds complexity while teaching you the basics of EQ.",
-      image: "#",
-      imageAlt: "alt",
+      image: "./assets/images/rainbow_eq.png",
+      imageAlt: "A rainbow colored digital EQ display.",
       tutorialLink: "#"
     },
     {
       title: "Compression",
       summary: "Compression summary",
-      image: "#",
+      image: "./assets/images/vu_meter.jpg",
       imageAlt: "alt",
       tutorialLink: "#"
     },
     {
       title: "Distortion",
       summary: "Distortion summary",
-      image: "#",
+      image: "./assets/images/distortion_pedal.jpg",
       imageAlt: "alt",
       tutorialLink: "#"
     }
