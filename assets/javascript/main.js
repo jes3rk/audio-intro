@@ -11,8 +11,8 @@ function tutorialCards() {
       title: "Gain",
       summary: "Simply put, gain is aplification. However, how and when gain is used can have a considerable impact on the sound and gain staging is one of the most important parts of live and recorded sound.",
       image: "./assets/images/knob.jpg",
-      imageAlt: "Knobs on an audio device",
-      tutorialLink: "#"
+      imageAlt: "Knobs on an audio device.",
+      tutorialLink: "./gain.html"
     },
     {
       title: "Equlization",
@@ -23,16 +23,16 @@ function tutorialCards() {
     },
     {
       title: "Compression",
-      summary: "Compression summary",
+      summary: "Compression Summary",
       image: "./assets/images/vu_meter.jpg",
-      imageAlt: "alt",
+      imageAlt: "An analogue meter showing audio level passing through a component.",
       tutorialLink: "#"
     },
     {
       title: "Distortion",
       summary: "Distortion summary",
       image: "./assets/images/distortion_pedal.jpg",
-      imageAlt: "alt",
+      imageAlt: "A selection of common guitar distortion pedals.",
       tutorialLink: "#"
     }
   ];
@@ -68,14 +68,17 @@ function tutorialCards() {
         content.attr("class", "card-content");
         // now make the link to go to the tutorial
         var link = $('<a/>');
-        link.attr("href", tutorials[x].link);
+        link.attr("href", tutorials[x].tutorialLink);
         link.text("Learn more about " + tutorials[x].title);
         // make a div for the Link
         var linkDiv = $('<div/>');
         linkDiv.attr("class", "card-action");
         // now make the card itself
         var card = $('<div/>');
-        card.attr("class", "card tutorial-card");
+        card.attr({
+          "class": "card tutorial-card",
+          "title": tutorials[x].title
+        });
         // make the column
         var col = $('<div/>');
         col.attr("class", "col s12 m6");
